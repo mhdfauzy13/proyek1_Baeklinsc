@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Custom CSS -->
 	<style>
-		body {
-			background-color: #8B4513;
+		body{
+			background-color: #bfc4d0
 		}
-
 		.login-box {
-			margin-top: 100px;
+			margin-top: 20px;
+			width: 100%;
 			max-width: 500px;
 			margin-left: auto;
 			margin-right: auto;
@@ -25,24 +25,18 @@
 			margin-bottom: 30px;
 			text-align: center;
 		}
-
-		.login-box .logo img {
-			max-width: 150px;
-			width: 100%;
-			height: auto;
-		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="login-box">
-			<div class="logo">
-				<img src="logo.png" alt="Logo">
-			</div>
-			<form>
+	<div class="container ">
+		<div class=" d-flex flex-column align-items-center">
+			<img src="/assets/image/logoBaeklin.png" class="pt-4" width="200px"/>
+		<div class="login-box " >
+			
+			<form >
 				<div class="form-group">
 					<label for="username">Username:</label>
-					<input type="text" class="form-control" id="username">
+					<input placeholder="username or email " type="text" class="form-control " id="username">
 				</div>
 				<div class="form-group">
 					<label for="password">Password:</label>
@@ -52,6 +46,8 @@
 			</form>
 		</div>
 	</div>
+		</div>
+		
 	<!-- Bootstrap JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
