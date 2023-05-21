@@ -18,7 +18,7 @@
             <div class='text-lg px-2 '>  
                 <p class="pl-14 mb-7 font-bold">Dashboard</p>
                 <div class="flex pl-5 mt-3">
-                    <img src="assets/icon/iconlayanan.png" alt="">
+                    <img src="assets/icon/iconsepatu.png" alt="">
                     <p class=" pl-2 font-bold"> Layanan</p> 
                    
                 </div>
@@ -35,21 +35,54 @@
             </div>
         </aside>
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <div class="bg-white rounded shadow rounded-3xl m-8 p-8 h-[485px] mt-20">
-                <div class="h-[200px] w-[220px] bg-gradient-to-b from-cyan-500 to-blue-900 rounded shadow rounded-2xl">
-                    <div class="h-[130px] w-[200px] ml-3 mt-">
-                        <img src="assets/image/sepatu.png" alt="">
+            <div class="flex bg-white rounded shadow m-8 p-8 h-[800px] mt-20 rounded-2xl">
+                <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
                     </div>
-                        <p class="ml-4 mt-1 font-bold font-serif text-white">Fast Cleaning</p>
-                        <p class="ml-4 mt-1 font-serif text-white text-xs mb-10">
-                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit, material sepatu yang dicuci hanya bagian Upper dan midsole.
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">FAST CLEANING</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
                         </p>
-                </div>
-                <div class="h-[200px] w-[220px] bg-gradient-to-b from-cyan-500 to-blue-900 rounded-2xl mt-5">
-                    <div class="h-[130px] w-[200px] ml-3">
-                        <img src="assets/image/sepatu.png" alt="">
                     </div>
-                        <p class="ml-4 mt-1 font-bold font-serif text-white">Deep Cleaning</p>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div>
+                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">DEEP CLEANING</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian khusus untuk sepatu secara detail untuk seluruh bagian memakan waktu 2-3 hari, aman untuk semua bahan dan warna.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div>
+                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">UNYELLOWING</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment layanan khusus untuk midsole sepatu yang yellowing memakan waktu 3-4 hari, aman untuk bahan rubber/karet. Solusi untuk mengembalikan warna midsole yang menguning selain treatment repaint midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-3 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>
