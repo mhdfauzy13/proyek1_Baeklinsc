@@ -9,6 +9,7 @@
     
 </head>
 <body>
+</div>
     <div class="flex w-full">
         <aside class="h-screen bg-white w-[250px]">
             <div class="flex pb-[50px]">
@@ -30,11 +31,19 @@
                <div class="flex pl-5 mt-3">
                     <img src="assets/icon/iconhistory.png" alt="">
                     <p class=" pl-2 font-bold"> History</p> 
-                   
                 </div>
             </div>
         </aside>
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
+            <div class="flex items-center justify-end">
+  <div class="w-12 h-12 mt-3 rounded-full overflow-hidden">
+    <img src="/assets/image/benzema.jpg" alt="Profile Picture" class="object-cover w-full h-full">
+  </div>
+  <h3 class="mr-4 text-lg text-black py-1 px-3">
+    Hi,Karim
+  </h3>
+</div>
+
             <div class="flex bg-white rounded shadow m-8 p-8 h-[800px] mt-20 rounded-2xl">
                 <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">

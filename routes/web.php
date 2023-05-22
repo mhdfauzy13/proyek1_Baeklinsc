@@ -22,6 +22,10 @@ Route::get('/layanan', function () {
     return view('Layanan');
 });
 
+Route::get('/detaillayanan', function () {
+    return view('Detaillayanan');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
