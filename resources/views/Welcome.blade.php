@@ -7,6 +7,6 @@
     <title>Index</title>
 </head>
 <body>
-    <p> INI LANDING PAGE </p>
+    <p>INI LANDING PAGE</p>
 </body>
 </html>
