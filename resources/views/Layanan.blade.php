@@ -12,6 +12,7 @@
 </div>
     <div class="flex w-full">
         @include('layouts.aside')
+        
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
             <div class="flex items-center justify-end">
   <div class="w-12 h-12 mt-3 rounded-full overflow-hidden">
@@ -19,15 +20,6 @@
   </div>
   <h3 class="mr-4 text-lg text-black py-1 px-3">
     Hi,Karim
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-
-        <x-dropdown-link :href="route('logout')"
-                onclick="event.preventDefault();
-                            this.closest('form').submit();">
-            {{ __('Log Out') }}
-        </x-dropdown-link>
-    </form>
   </h3>
 </div>
 
@@ -59,9 +51,12 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
-                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
-                            Keterangan Layanan
-                        </button>
+                        <a href="layanan/fast-cleaning">
+                            <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                                Keterangan Layanan
+                            </button>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">

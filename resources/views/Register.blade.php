@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>register Form</title>
+	<title>register</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Custom CSS -->
@@ -34,7 +34,7 @@
 		<div style="max-width: 500px;border-radius: 25px;" class="bg-dark mb-4 w-100" >
 			<div class="register-box  border-top-5 border-danger" >
 				<div class="border-bottom border-dark mb-4">
-					<p style="font-size: 20px; font-weight:bold">register</p>
+					<p style="font-size: 20px; font-weight:bold">Register</p>
 				</div>
 				<form >
 					<div class="form-group">
@@ -42,25 +42,25 @@
 							<img src="assets/icon/userLogo.png" alt="userlogo" width="20px" />
 							Username:
 						</label>
-						<input placeholder="username or email " type="text" class="form-control " id="username">
+						<input placeholder="username or email  " type="text" class="form-control " id="username">
+					</div>
+					<div class="form-group">
+						<label for="email">
+							<img src="assets/icon/iconemail.png" alt="iconemail" width="20px" />
+							Email:
+						</label>
+						<input placeholder="email " type="text" class="form-control " id="email">
 					</div>
 					<div class="form-group">
 						<label for="username">
-							<img src="assets/icon/userLogo.png" alt="userlogo" width="20px" />
-							email:
+							<img src="assets/icon/iconemail.png" alt="iconemail" width="20px" />
+							No Telephone:
 						</label>
 						<input placeholder="username or email " type="text" class="form-control " id="username">
 					</div>
 					<div class="form-group">
 						<label for="username">
-							<img src="assets/icon/userLogo.png" alt="userlogo" width="20px" />
-							No Telephon:
-						</label>
-						<input placeholder="username or email " type="text" class="form-control " id="username">
-					</div>
-					<div class="form-group">
-						<label for="username">
-							<img src="assets/icon/userLogo.png" alt="userlogo" width="20px" />
+							<img src="assets/icon/icontelepon.png" alt="icontelepon" width="20px" />
 							Alamat:
 						</label>
 						<input placeholder="username or email " type="text" class="form-control " id="username">
@@ -81,7 +81,7 @@
 						<a href="/" >udah punya akun? </a>
 					</div>
 					
-					<button style="font-weight:bold" type="submit" class="btn btn-dark w-100 ">register</button>
+					<button style="font-weight:bold" type="submit" class="btn btn-dark w-100 ">Register</button>
 				</form>
 			</div>
 		</div>
