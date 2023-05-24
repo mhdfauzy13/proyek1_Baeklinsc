@@ -11,29 +11,8 @@
 <body>
 </div>
     <div class="flex w-full">
-        <aside class="h-screen bg-white w-[250px]">
-            <div class="flex pb-[50px]">
-               <img src="/assets/image/logoBaeklin.png" class="pt-4" width="100px"/>
-               <img src="/assets/image/Baeklin Shoes Cleaning.png"class="pt-4" width="100px"/>
-            </div>
-            <div class='text-lg px-2 '>  
-                <p class="pl-14 mb-7 font-bold">Dashboard</p>
-                <div class="flex pl-5 mt-3">
-                    <img src="assets/icon/iconsepatu.png" alt="">
-                    <p class=" pl-2 font-bold"> Layanan</p> 
-                   
-                </div>
-                <div class="flex pl-5 mt-3">
-                    <img src="assets/icon/iconmoney.png" alt="">
-                    <p class=" pl-2 font-bold"> Transaksi</p> 
-                   
-                </div>
-               <div class="flex pl-5 mt-3">
-                    <img src="assets/icon/iconhistory.png" alt="">
-                    <p class=" pl-2 font-bold"> History</p> 
-                </div>
-            </div>
-        </aside>
+        @include('layouts.aside')
+        
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
             <div class="flex items-center justify-end">
   <div class="w-12 h-12 mt-3 rounded-full overflow-hidden">
@@ -72,9 +51,12 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
-                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
-                            Keterangan Layanan
-                        </button>
+                        <a href="layanan/fast-cleaning">
+                            <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                                Keterangan Layanan
+                            </button>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
