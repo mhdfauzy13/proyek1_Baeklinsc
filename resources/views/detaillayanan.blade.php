@@ -40,7 +40,7 @@
     <img src="/assets/image/benzema.jpg" alt="Profile Picture" class="object-cover w-full h-full">
   </div>
   <h3 class="mr-4 text-lg text-black py-1 px-3">
-    Hi,Karim
+    Hi,Karim 
   </h3>
 </div>
             <div class="flex bg-white rounded shadow m-8 p-8 h-[450px] mt-20 rounded-2xl">
@@ -53,8 +53,12 @@
                     </div>
                 </div>
                 <div>
-                <h3 class="font-bold ml-5 mt-2">Deskripsi Paket</h3>
-            </div>
+                <h3 class="font-bold text-lg ml-5 mt-2">Deskripsi Layanan</h3>
+                <p class="text-xs ml-2 "> Layanan Fast Cleaning Laundry Sepatu adalah layanan yang ditawarkan oleh jasa laundry atau cuci sepatu
+                     untuk membersihkan sepatu dengan cepat dan efisien. 
+                    Layanan ini sangat cocok bagi mereka yang ingin menjaga penampilan sepatu mereka 
+                    tetap bersih dan segar tanpa harus meluangkan waktu untuk membersihkannya sendiri.</p>
+                </div>
             </div>
         </main>
     </div>
