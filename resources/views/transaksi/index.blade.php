@@ -16,7 +16,7 @@
         @include('layouts.aside')
 
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <div class="flex bg-white items-center justify-center shadow m-8 p-8 h-[800px] mt-20 rounded-2xl">
+            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 h-[830px] w-[980px] mt-20 rounded-2xl ml-20">
                 <h1>INI HALAMAN TRANSAKSI</h1>
             </div>
         </main>

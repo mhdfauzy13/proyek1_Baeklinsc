@@ -28,15 +28,43 @@
                         <img src="../assets/image/sepatukw.png" alt="">
                     </div>
                     <div>
-                        <p class=" ml-4 mt-3 font-bold font-serif text-black">FAST CLEANING</p>
+                        <p class=" ml-4 mt-3 font-bold font-serif text-black">DEEP CLEANING</p>
                     </div>
                 </div>
                 <div>
                 <h3 class="font-bold text-lg ml-5 mt-2">Deskripsi Layanan</h3>
-                <p class="text-xs ml-2 "> Layanan Fast Cleaning Laundry Sepatu adalah layanan yang ditawarkan oleh jasa laundry atau cuci sepatu
-                     untuk membersihkan sepatu dengan cepat dan efisien. 
-                    Layanan ini sangat cocok bagi mereka yang ingin menjaga penampilan sepatu mereka 
-                    tetap bersih dan segar tanpa harus meluangkan waktu untuk membersihkannya sendiri.</p>
+                <div class=" max-w-md">
+                    <p class="text-berge ml-5 "> Treatment pencucian khusus untuk sepatu secara detail untuk seluruh bagian,
+                    aman untuk semua bahan dan warna.</p>
+                </div>
+                <div class="dropdown dropdown-bottom mt-2 ml-5">
+                   <select onchange="onselected()" class="select select-info w-full max-w-xs" id="varian">
+                        <option disabled selected>Pilih Varian</option>
+                        <option>Mild</option>
+                        <option>Hard</option>
+                        <option>Premium</option>  
+                    </select>
+                    <p class="pt-3">Rp. <span id='harga' ></span> </p>
+                    <script>
+                        const harga = document.getElementById('harga');
+                        function onselected() {
+                            const varian = document.getElementById('varian').value;
+                            
+                            console.log('varian', varian);
+                            if(varian == 'Mild'){
+                                harga.innerHTML = '25.000'
+                            }else if(varian == 'Hard'){
+                                harga.innerHTML = '30.000'
+                            }else{
+                                harga.innerHTML = '40.000'
+                            }
+                        }
+                        
+                    </script>
+                </div>
+                <div class="ml-5 mt-12">
+                      <button class="btn btn-sm">Pesan</button>
+                </div>
                 </div>
             </div>
         </main>

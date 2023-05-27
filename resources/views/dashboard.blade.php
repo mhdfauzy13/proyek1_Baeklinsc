@@ -31,7 +31,7 @@
   </h3>
 </div>
 
-            <div class="flex bg-white rounded shadow m-8 p-8 h-[800px] mt-20 rounded-2xl">
+            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 h-[830px] w-[980px] mt-20 rounded-2xl ml-20">
                 <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
@@ -59,9 +59,12 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
-                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
-                            Keterangan Layanan
-                        </button>
+                        <a href="layanan/fast-cleaning">
+                            <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                                Keterangan Layanan
+                            </button>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
@@ -76,6 +79,54 @@
                     </div>
                     <div class="flex justify-center items-center">
                         <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-3 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div> 
+                <div class="h-[370px] w-[290px] bg-gray-200 mt-6 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">LEATHER CARE</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div>
+                 <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">REPAINT</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div>
+                 <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">REGLUE</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
                             Keterangan Layanan
                         </button>
                     </div>
