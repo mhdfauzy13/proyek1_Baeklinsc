@@ -23,24 +23,39 @@
                     </div>
             </div>
 
-            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 h-[830px] w-[980px] mt-20 rounded-2xl ml-20">
-                <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow">
+            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 h-[830px] w-[1000px] mt-20 rounded-2xl ml-20">
+                @php
+    use Illuminate\Support\Str;
+@endphp
+                @foreach ($layanan as $lynn)
+                
+                    <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow m-2">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
                     <div>
-                        <p class=" text-center mt-3 font-bold font-serif text-black">FAST CLEANING</p>
-                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
-                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        <p class=" text-center mt-3 font-bold font-serif text-black">{{ $lynn->nama }}</p>
+                        
+
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5"> 
+                            {{ \Illuminate\Support\Str::limit($lynn->keterangan, $limit = 130, $end = '...') }}
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
+                        <script>
+
+                        </script>
+                        <a href="layanan/{{ str_replace(" ","-",$lynn->nama) }}">
                         <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
                             Keterangan Layanan
                         </button>
+                        </a>
                     </div>
                 </div>
-                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                @endforeach
+
+                
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -51,15 +66,15 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
-                        <a href="layanan/fast-cleaning">
+                        <a href="layanan/deep-cleaning">
                             <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
                                 Keterangan Layanan
                             </button>
                         </a>
                         
                     </div>
-                </div>
-                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -74,10 +89,10 @@
                             Keterangan Layanan
                         </button>
                     </div>
-                </div> 
-                <div class="h-[370px] w-[290px] bg-gray-200 mt-6 rounded shadow">
+                </div>  --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
-                        <img src="assets/image/sepatukw.png" alt="">
+                        <img src="assets/image/leathersepatu.png" alt="">
                     </div>
                     <div>
                         <p class=" text-center mt-3 font-bold font-serif text-black">LEATHER CARE</p>
@@ -90,8 +105,8 @@
                             Keterangan Layanan
                         </button>
                     </div>
-                </div>
-                 <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -106,8 +121,8 @@
                             Keterangan Layanan
                         </button>
                     </div>
-                </div>
-                 <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -122,7 +137,7 @@
                             Keterangan Layanan
                         </button>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </main>
     </div>

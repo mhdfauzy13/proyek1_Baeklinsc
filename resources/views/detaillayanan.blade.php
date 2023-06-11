@@ -22,29 +22,41 @@
     Hi,Karim 
   </h3>
 </div>
+            @foreach ($layanan as $item)
+                        
+                    
             <div class="flex bg-white rounded shadow m-8 p-8 h-[450px] mt-20 rounded-2xl">
                 <div class="h-[270px] w-[290px] bg-gray-200 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="../assets/image/sepatukw.png" alt="">
                     </div>
+                   
                     <div>
-                        <p class=" ml-4 mt-3 font-bold font-serif text-black">DEEP CLEANING</p>
+                        <p class=" ml-4 mt-3 font-bold font-serif text-black">{{ $item->nama }}</p>
                     </div>
                 </div>
                 <div>
                 <h3 class="font-bold text-lg ml-5 mt-2">Deskripsi Layanan</h3>
                 <div class=" max-w-md">
-                    <p class="text-berge ml-5 "> Treatment pencucian khusus untuk sepatu secara detail untuk seluruh bagian,
-                    aman untuk semua bahan dan warna.</p>
+                    <p class="text-berge ml-5 "> 
+
+                        {{ $item->keterangan }}
+                    </p>
+                    
+                    
                 </div>
                 <div class="dropdown dropdown-bottom mt-2 ml-5">
                    <select onchange="onselected()" class="select select-info w-full max-w-xs" id="varian">
-                        <option disabled selected>Pilih Varian</option>
+                    
+                     @foreach ($item->details as $harga)
+                         <option>{{ $harga->nama }}</option>
+                     @endforeach    
+                    {{-- <option disabled selected>Pilih Varian</option>
                         <option>Mild</option>
                         <option>Hard</option>
-                        <option>Premium</option>  
+                        <option>Premium</option>   --}}
                     </select>
-                    <p class="pt-3">Rp. <span id='harga' ></span> </p>
+                    <p class="pt-3 font-semibold">Rp. <span id='harga' ></span> </p>
                     <script>
                         const harga = document.getElementById('harga');
                         function onselected() {
@@ -67,6 +79,7 @@
                 </div>
                 </div>
             </div>
+            @endforeach
         </main>
     </div>
 </body>

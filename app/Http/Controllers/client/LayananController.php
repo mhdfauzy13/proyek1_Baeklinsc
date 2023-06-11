@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 
 class LayananController extends Controller
@@ -12,7 +13,10 @@ class LayananController extends Controller
      */
     public function index()
     {
-        return view('Layanan');
+        $layanan = Layanan::all();
+        return view('Layanan',[
+            'layanan' => $layanan,
+        ]);
     }
 
     /**
@@ -36,7 +40,12 @@ class LayananController extends Controller
      */
     public function show(string $nama)
     {
-        return view('Detaillayanan');
+        $nameLayanan = str_replace('-',' ', $nama);
+        $layanan = Layanan::query()->where('nama', $nameLayanan)->with('details')->get();
+        // dd($layanan);
+        return view('Detaillayanan',[
+            'layanan' => $layanan,
+        ]);
     }
 
     /**

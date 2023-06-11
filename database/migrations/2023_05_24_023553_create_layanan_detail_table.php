@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('layanan_detail', function (Blueprint $table) {
             $table->id();
-            $table->integer('layanan_id');
-            $table->integer('nama');
+            $table->unsignedBigInteger('layanan_id');
+            $table->string('nama');
             $table->integer('harga');
             $table->timestamps();
+
+            $table->foreign('layanan_id')->references('id')->on('layanan');
         });
     }
 

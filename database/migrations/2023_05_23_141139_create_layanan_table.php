@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('layanan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama')->unique();
-            $table->string('deskripsi');
-            $table->string('image');
+            $table->string('nama');
+            $table->string('keterangan');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layanan</title>
+    <title>Dashboard</title>
     @vite('../resources/css/app.css')
     
 </head>
@@ -21,9 +21,8 @@
     Hi,Karim
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-
         <x-dropdown-link :href="route('logout')"
-                onclick="event.preventDefault();
+                onclick="event.preventDefault();  
                             this.closest('form').submit();">
             {{ __('Log Out') }}
         </x-dropdown-link>
@@ -85,7 +84,7 @@
                 </div> 
                 <div class="h-[370px] w-[290px] bg-gray-200 mt-6 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
-                        <img src="assets/image/sepatukw.png" alt="">
+                        <img src="assets/image/leathersepatu.png" alt="">
                     </div>
                     <div>
                         <p class=" text-center mt-3 font-bold font-serif text-black">LEATHER CARE</p>
