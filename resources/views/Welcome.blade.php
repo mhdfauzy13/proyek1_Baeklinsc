@@ -7,43 +7,46 @@
      @vite('../resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    <header class="bg-blue-500 py-4">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-xl font-bold">Logo</a>
-            <ul class="space-x-4">
-                <li><a href="#" class="text-white">Home</a></li>
-                <li><a href="#" class="text-white">Features</a></li>
-                <li><a href="#" class="text-white">Pricing</a></li>
-                <li><a href="#" class="text-white">Contact</a></li>
+    <header class="flex bg-black py-4">
+        <div class="flex justify-start h-[100px] ">
+            <img src="../assets/image/logoBaeklin.png" alt="">
+        </div>
+        <nav class="items justify-end">
+            <ul class="space-x-2">
+                <li><a href="http://127.0.0.1:8000/register" class="text-white">Register</a></li>
+                <li><a href="http://127.0.0.1:8000/login" class="text-white">Login</a></li>
             </ul>
         </nav>
+        
     </header>
-    <section class="container mx-auto py-16">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full md:w-1/2 px-4 mb-8">
-                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
-                    <img class="w-full" src="../assets/image/landing1.png" alt="Image 1">
-                    <div class="px-6 py-4">
-                        <h2 class="text-xl font-bold mb-2">Image 1</h2>
-                        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed arcu dolor.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 px-4 mb-8">
-                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
-                    <img class="w-full" src="../assets/image/landing2.png" alt="Image 2">
-                    <div class="px-6 py-4">
-                        <h2 class="text-xl font-bold mb-2">Image 2</h2>
-                        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed arcu dolor.</p>
-                    </div>
-                </div>
-            </div>
+    
+    <section class="container mx-auto">
+       <div class="flex items-center justify-center h-screen">
+        <div class="max-w-screen-lg mx-auto">
+            <img src="{{ asset('../assets/image/landing2.png') }}" alt="Landing Image" class="w-full h-full object-cover" />
         </div>
+    </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
     </section>
-    <footer class="bg-gray-200 py-4">
-        <div class="container mx-auto text-center text-gray-600">
-            &copy; 2023 Company Name. All rights reserved.
-        </div>
-    </footer>
+    <footer class="footer p-10 bg-black text-base-content">
+    <div class="text-white">
+        <span class="footer-title">About us</span> 
+        <p class=" max-w-md text-left">
+            Baeklin Shoes Cleaning adalah usaha yang bergerak dibidang jasa pencucian khusus sepatu didirikan pada tahun 2018,
+            kami telah mengembangkan sistem cuci sepatu yang efektif dan efisien untuk memberikan hasil terbaik bagi pelanggan. 
+            menggunakan teknik cuci sepatu terbaik dan bahan-bahan yang aman untuk memberikan hasil terbaik dalam setiap layanan kami.
+        </p>
+    </div> 
+    <div class="text-white">
+        <span class="footer-title">maps</span> 
+        <a href=""></a>
+    </div> 
+    <div class="text-white">
+        <span class="footer-title">Social</span> 
+    <div class="grid grid-flow-col gap-4">
+    
+    </div>
+</footer>
 </body>
 </html>

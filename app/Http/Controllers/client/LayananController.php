@@ -46,6 +46,7 @@ class LayananController extends Controller
         return view('Detaillayanan',[
             'layanan' => $layanan,
         ]);
+        
     }
 
     /**

@@ -14,14 +14,14 @@
         {{-- todo::aside --}}
         @include('layouts.aside')
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <div class="flex items-center justify-end">
-  <div class="w-12 h-12 mt-3 rounded-full overflow-hidden">
-    <img src="/assets/image/benzema.jpg" alt="Profile Picture" class="object-cover w-full h-full">
-  </div>
-  <h3 class="mr-4 text-lg text-black py-1 px-3">
-    Hi,Karim 
-  </h3>
-</div>
+            <div class="flex justify-end mt-2 mr-3">
+                <div class="bg-gray-500 h-55  rounded-lg">
+                    <div class="flex h-10 mr-2"> 
+                        <h3 class="text-lg text-black py-1 px-3">Hi, {{ Auth::user()->name }} </h3>
+                        <img src="../assets/icon/userLogo.png" alt="">
+                    </div> 
+                </div>
+            </div>
             @foreach ($layanan as $item)
                         
                     
@@ -46,10 +46,10 @@
                     
                 </div>
                 <div class="dropdown dropdown-bottom mt-2 ml-5">
-                   <select onchange="onselected()" class="select select-info w-full max-w-xs" id="varian">
-                    
+                   <select  class="select select-info w-full max-w-xs" id="varian">
+                        <option disabled>Pilih varian </option>
                      @foreach ($item->details as $harga)
-                         <option>{{ $harga->nama }}</option>
+                         <option value={{ $harga->harga }}>{{ $harga->nama }} </option>
                      @endforeach    
                     {{-- <option disabled selected>Pilih Varian</option>
                         <option>Mild</option>
@@ -57,25 +57,35 @@
                         <option>Premium</option>   --}}
                     </select>
                     <p class="pt-3 font-semibold">Rp. <span id='harga' ></span> </p>
+                    
                     <script>
+                        const varian = document.getElementById('varian')
                         const harga = document.getElementById('harga');
-                        function onselected() {
-                            const varian = document.getElementById('varian').value;
+                        varian.addEventListener('change', function(){
+                            const selected = varian.value;
+                        console.log(selected)
+
+                            harga.innerHTML = selected
+                        })
+                        
+                        // function onselected() {
+                        //     const varian = document.getElementById('varian').value;
                             
-                            console.log('varian', varian);
-                            if(varian == 'Mild'){
-                                harga.innerHTML = '25.000'
-                            }else if(varian == 'Hard'){
-                                harga.innerHTML = '30.000'
-                            }else{
-                                harga.innerHTML = '40.000'
-                            }
-                        }
+                        //     console.log ('varian', varian);  
+                        //     if(varian == 'Mild'){
+                        //         harga.innerHTML = '25.000'
+                        //     }else if(varian == 'Hard'){
+                        //         harga.innerHTML = '30.000'
+                        //     }else{
+                        //         harga.innerHTML = '40.000'
+                        //     }
+                        // }
                         
                     </script>
                 </div>
                 <div class="ml-5 mt-12">
-                      <button class="btn btn-sm">Pesan</button>
+                    
+                     <button class="btn btn-sm">Pesan</button>
                 </div>
                 </div>
             </div>
@@ -83,4 +93,23 @@
         </main>
     </div>
 </body>
+<footer class="footer p-10 bg-black text-base-content">
+  <div class="text-white">
+    <span class="footer-title">About us</span> 
+    <p class=" max-w-md text-left">
+        Baeklin Shoes Cleaning adalah usaha yang bergerak dibidang jasa pencucian khusus sepatu didirikan pada tahun 2018,
+        kami telah mengembangkan sistem cuci sepatu yang efektif dan efisien untuk memberikan hasil terbaik bagi pelanggan. 
+        menggunakan teknik cuci sepatu terbaik dan bahan-bahan yang aman untuk memberikan hasil terbaik dalam setiap layanan kami.
+    </p>
+  </div> 
+  <div class="text-white">
+    <span class="footer-title">maps</span> 
+  <a href=""></a>
+  </div> 
+  <div class="text-white">
+    <span class="footer-title">Social</span> 
+    <div class="grid grid-flow-col gap-4">
+        
+  </div>
+</footer>
 </html>   
