@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100">
     <header class="flex bg-black py-4">
-        <div class="flex justify-start h-[100px] ">
+        <div class="flex justify-start h-[310px] ">
             <img src="../assets/image/logoBaeklin.png" alt="">
         </div>
         <nav class="items justify-end">

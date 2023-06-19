@@ -14,4 +14,10 @@ class LayananDetail extends Model
         'nama',
         'harga',
     ];
+    public function layanan()
+    {
+        return $this->belongsTo(Layanan::class);
+    }
+
+    
 }

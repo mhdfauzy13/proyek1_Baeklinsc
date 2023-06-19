@@ -18,6 +18,6 @@ class Layanan extends Model
 
   public function details()
     {
-        return $this->hasMany(LayananDetail::class);
+        return $this->hasMany(LayananDetail::class, 'layanan_id');
     }
 }

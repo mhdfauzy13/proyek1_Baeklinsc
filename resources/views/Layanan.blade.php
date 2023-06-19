@@ -30,8 +30,7 @@
                         </x-dropdown-link>
                      </form>
             </div>
-
-            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 h-[830px] w-[1000px] mt-20 rounded-2xl ml-20">
+            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 w-[1000px] mt-20 rounded-2xl ml-20">
                 @php
             use Illuminate\Support\Str;
                 @endphp
