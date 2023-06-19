@@ -14,33 +14,55 @@
         @include('layouts.aside')
         
         <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <div class="flex items-center justify-end">
-  <div class="w-12 h-12 mt-3 rounded-full overflow-hidden">
-    <img src="/assets/image/benzema.jpg" alt="Profile Picture" class="object-cover w-full h-full">
-  </div>
-  <h3 class="mr-4 text-lg text-black py-1 px-3">
-    Hi,Karim
-  </h3>
-</div>
-
-            <div class="flex bg-white rounded shadow m-8 p-8 h-[800px] mt-20 rounded-2xl">
-                <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow">
+            <div class="flex justify-end mt-2 mr-3">
+                <div class="bg-gray-500 h-55  rounded-lg">
+                    <div class="flex h-10 mr-2"> 
+                        <h3 class="text-lg text-black py-1 px-3">Hi, {{ Auth::user()->name }} </h3>
+                        <img src="../assets/icon/userLogo.png" alt="">
+                    </div> 
+                </div>
+                <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();  
+                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                     </form>
+            </div>
+            <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 w-[1000px] mt-20 rounded-2xl ml-20">
+                @php
+            use Illuminate\Support\Str;
+                @endphp
+                @foreach ($layanan as $lynn)
+                
+                    <div class="h-[370px] w-[290px] bg-gray-200 rounded shadow m-2">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
                     <div>
-                        <p class=" text-center mt-3 font-bold font-serif text-black">FAST CLEANING</p>
-                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
-                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        <p class=" text-center mt-3 font-bold font-serif text-black">{{ $lynn->nama }}</p>
+                        
+
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5"> 
+                            {{ \Illuminate\Support\Str::limit($lynn->keterangan, $limit = 130, $end = '...') }}
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
+                        <script>
+
+                        </script>
+                        <a href="layanan/{{ str_replace(" ","-",$lynn->nama) }}">
                         <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
                             Keterangan Layanan
                         </button>
+                        </a>
                     </div>
                 </div>
-                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                @endforeach
+
+                
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -51,15 +73,15 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center">
-                        <a href="layanan/fast-cleaning">
+                        <a href="layanan/deep-cleaning">
                             <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
                                 Keterangan Layanan
                             </button>
                         </a>
                         
                     </div>
-                </div>
-                <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 ml-5 rounded shadow">
                     <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
                         <img src="assets/image/sepatukw.png" alt="">
                     </div>
@@ -74,9 +96,76 @@
                             Keterangan Layanan
                         </button>
                     </div>
-                </div>
+                </div>  --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/leathersepatu.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">LEATHER CARE</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">REPAINT</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div> --}}
+                {{-- <div class="h-[370px] w-[290px] bg-gray-200 mt-6 ml-5 rounded shadow">
+                    <div class="h-[150px] w-[190px] ml-10 mt-[10px]">
+                        <img src="assets/image/sepatukw.png" alt="">
+                    </div>
+                    <div>
+                        <p class=" text-center mt-3 font-bold font-serif text-black">REGLUE</p>
+                        <p class=" text-center ml-2 mr-2 text-black text-xs mt-5">
+                            Treatment pencucian cepat yang memakan waktu kurang lebih 10-15 menit,material sepatu yang dicuci hanya bagian Upper dan midsole.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-cyan-500 hover:bg-blue-700 text-white mt-11 py-3 px-5 rounded shadow rounded-full">
+                            Keterangan Layanan
+                        </button>
+                    </div>
+                </div> --}}
             </div>
         </main>
     </div>
 </body>
+<footer class="footer p-10 bg-black text-base-content">
+  <div class="text-white">
+    <span class="footer-title">About us</span> 
+    <p class=" max-w-md text-left">
+        Baeklin Shoes Cleaning adalah usaha yang bergerak dibidang jasa pencucian khusus sepatu didirikan pada tahun 2018,
+        kami telah mengembangkan sistem cuci sepatu yang efektif dan efisien untuk memberikan hasil terbaik bagi pelanggan. 
+        menggunakan teknik cuci sepatu terbaik dan bahan-bahan yang aman untuk memberikan hasil terbaik dalam setiap layanan kami.
+    </p>
+  </div> 
+  <div class="text-white">
+    <span class="footer-title">maps</span> 
+  <a href=""></a>
+  </div> 
+  <div class="text-white">
+    <span class="footer-title">Social</span> 
+    <div class="grid grid-flow-col gap-4">
+        
+  </div>
+</footer>
 </html>   
