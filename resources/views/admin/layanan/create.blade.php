@@ -11,10 +11,19 @@
 <body>
 </div>
     <div class="flex w-full">
+        {{-- todo::aside --}}
         @include('layouts.aside')
         
-        <main class=" flex  justify-center w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <form method="post" actions={{ route('layanan.store') }} class="flex flex-col bg-white shadow m-8 p-8 h-[830px] w-[1000px] mt-20 rounded-2xl ml-20">
+        <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
+            <div class="flex justify-end mt-2 mr-3">
+                <div class="bg-gray-500 h-55  rounded-lg">
+                    <div class="flex h-10 mr-2"> 
+                        <h3 class="text-lg text-black py-1 px-3">Hi, {{ Auth::user()->name }} </h3>
+                        <img src="../../../assets/icon/userLogo.png" alt="">
+                    </div> 
+                </div>
+            </div>
+            <form method="post" actions={{ route('layanan.store') }} class="flex flex-col bg-white shadow m-8 p-8 w-[1000px] mt-20 rounded-2xl ml-20">
                 @csrf
                 <div class="flex flex-col max-w-md">
                     <div class="mb-4">
@@ -43,7 +52,7 @@
                             <input name="harga_varian[]" type="text" class="harga-varian-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan harga varian">
                         </div>
                     </div>
-                    <button onclick="addVariant()" class="btn btn-primary mx-2 add-variant">Add</button>
+                    <button onclick="addVariant()"  class="btn btn-succes mx-2 add-variant">Add</button>
                 </div>
                 <div id="varian-container" class="flex flex-col">
 

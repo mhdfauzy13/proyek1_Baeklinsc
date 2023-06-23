@@ -26,15 +26,23 @@
           </script>
         @endif
         
-        <main class=" flex  justify-center w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <div class="overflow-x-auto my-8">
+        <main class=" w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
+            <div class="flex justify-end mt-2 mr-3">
+                <div class="bg-gray-500 h-55  rounded-lg">
+                    <div class="flex h-10 mr-2"> 
+                        <h3 class="text-lg text-black py-1 px-3">Hi, {{ Auth::user()->name }} </h3>
+                        <img src="../assets/icon/userLogo.png" alt="">
+                    </div> 
+                </div>
+            </div>
+            <div class="overflow-x-auto mt-10 mr-6">
                 <div class="flex justify-end">
                     <a href={{ route('layanan.create') }}>
-                    <button class="btn btn-primary">Add</button>
-                    
+                    <button class="btn btn-success">Add</button>
                     </a>
                 </div>
-  <table class="table">
+            </div>
+  <table class="table mt-6 ml-9">
     <!-- head -->
     <thead>
       <tr>

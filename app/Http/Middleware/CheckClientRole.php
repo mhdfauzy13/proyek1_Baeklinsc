@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckUserRole
+class CheckClientRole
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,6 @@ class CheckUserRole
     }
 
     // Jika bukan memiliki peran yang sesuai, redirect atau berikan respons sesuai kebutuhan
-    return redirect()->route('layanan.admin')->with('error', 'Anda tidak memiliki akses sebagai ' . $role);
+    return redirect()->route('layanan.index')->with('error', 'Anda tidak memiliki akses sebagai ' . $role);
 }
-
 }

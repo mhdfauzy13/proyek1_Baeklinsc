@@ -21,14 +21,6 @@
                         <img src="../assets/icon/userLogo.png" alt="">
                     </div> 
                 </div>
-                <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault();  
-                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-dropdown-link>
-                     </form>
             </div>
             <div class="flex flex-wrap bg-white rounded shadow m-8 p-8 w-[1000px] mt-20 rounded-2xl ml-20">
                 @php

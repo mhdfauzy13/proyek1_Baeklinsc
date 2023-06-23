@@ -55,6 +55,10 @@ class LayananController extends Controller
     ]);
 }
 
+    public function update(Request $request){
+        $nama = $request->nama;
+        dd($nama);
+    }
 
     public function destroy($id){
         $layanan = Layanan::find($id);

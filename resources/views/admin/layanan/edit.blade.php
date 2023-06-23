@@ -7,14 +7,22 @@
     <title>Layanan</title>
     @vite('../resources/css/app.css')
     
-</head>
+</head> 
 <body>
 </div>
     <div class="flex w-full">
+         {{-- todo::aside --}}
         @include('layouts.aside')
-        
-        <main class=" flex  justify-center w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
-            <form method="post" actions={{ route('layanan.store') }} class="flex flex-col bg-white shadow m-8 p-8 h-[830px] w-[1000px] mt-20 rounded-2xl ml-20">
+        <main class="w-full min-h-screen bg-gray-300 rounded shadow rounded-tl-[60px] rounded-bl-[60px]">
+             <div class="flex justify-end mt-2 mr-3">
+                <div class="bg-gray-500 h-55  rounded-lg">
+                    <div class="flex h-10 mr-2"> 
+                        <h3 class="text-lg text-black py-1 px-3">Hi, {{ Auth::user()->name }} </h3>
+                        <img src="../../../assets/icon/userLogo.png" alt="">
+                    </div> 
+                </div>
+            </div>
+            <form method="post" actions={{ route('layanan.store') }} class="flex flex-col bg-white shadow m-8 p-8 w-[1000px] mt-20 rounded-2xl ml-20">
                 @csrf
                 <div class="flex flex-col max-w-md">
                     <div class="mb-4">

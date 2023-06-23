@@ -33,14 +33,14 @@
                         <p class=" ml-4 mt-3 font-bold font-serif text-black">DEEP CLEANING</p>
                     </div>
                 </div>
-               <div class="flex flex-warp">
-                 <div class=" ml-5">
+                <div class="flex flex-warp">
+                    <div class=" ml-5">
                     <div class="mb-4">
                         <label for="recipient_name" class="block text-gray-700 text-sm font-bold mb-2">Nama Penerima:</label>
                         <input id="recipient_name" name="recipient_name" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan nama penerima">
                     </div>
                     <div class="mb-4">
-                        <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Alamat:</label>
+                        <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Alamat Penerima:</label>
                         <textarea id="address" name="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan alamat penerima"></textarea>
                     </div>
                     <div class="mb-4">
@@ -54,19 +54,24 @@
                         <input id="recipient_name" name="recipient_name" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan layanan yang dipesan">
                     </div>
                     </div>
-                    <div>
-                      <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Ambil Sendiri?</label>
-                      <div class="flex">
-                        <input type="radio" name="radio-1" class="radio" checked /> <p class="font-bold">
-                        YA
-                        </p>
-                        <input type="radio" name="radio-1" class="radio ml-3" /> <p class="font-bold">
-                        TIDAK
-                        </p>
-                        </div>
-                    </div>
+                     <div class="container mx-auto px-4 py-8">
+                        <form action="{{ route('transaksi.index') }}" method="POST">
+                            @csrf
+                            <label for="date">Select Date:</label>
+                            <input type="text" id="date" name="date" placeholder="Select date" required>
+
+                            <button class="btn" type="submit">Submit</button>
+                        </form>
+                    </div>  
+
+                        <script src="{{ asset('js/flatpickr.js') }}"></script>
+                        <script>
+                            flatpickr("#date", {
+                                dateFormat: "d/m/Y",
+                            });
+                        </script>
                 </div>
-               </div>
+                </div>
             </div>
         </main>
     </div>

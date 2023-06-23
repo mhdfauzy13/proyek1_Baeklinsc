@@ -15,6 +15,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "daisyui": "^2.51.6"
+        "daisyui": "^2.51.6",
+        "flatpickr": "^4.6.13"
     }
 }
